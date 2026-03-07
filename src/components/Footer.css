@@ -1,0 +1,83 @@
+.footer {
+    background: #2a1a2e;
+    color: #c8a8d0;
+    padding: 64px 0 0;
+    margin-top: 80px;
+  }
+  
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 60px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(244,120,32,0.2);
+  }
+  
+  .footer-logo {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff9f5;
+    margin-bottom: 14px;
+  }
+  
+  .footer-tagline {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a888b0;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  
+  .footer-social { display: flex; gap: 12px; }
+  
+  .social-link {
+    width: 38px; height: 38px;
+    border: 1.5px solid rgba(244,120,32,0.4);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #f47820;
+    transition: all 0.2s;
+  }
+  .social-link:hover { background: #f47820; color: #fff; border-color: #f47820; transform: translateY(-2px); }
+  
+  .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .footer-col { display: flex; flex-direction: column; gap: 10px; }
+  
+  .footer-col-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f47820;
+    margin-bottom: 6px;
+  }
+  
+  .footer-col button, .footer-col a {
+    background: none; border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px; font-weight: 400;
+    color: #a888b0; cursor: pointer;
+    text-align: left; padding: 0;
+    transition: color 0.2s;
+  }
+  .footer-col button:hover, .footer-col a:hover { color: #fff9f5; }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #6a4a72;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .footer-heart { color: #e8407a; }
+  
+  @media (max-width: 700px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+    .footer-links { grid-template-columns: 1fr 1fr; }
+  }

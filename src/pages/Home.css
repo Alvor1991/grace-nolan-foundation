@@ -1,0 +1,169 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: #fff9f5;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(232,64,122,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 10% 80%, rgba(155,79,166,0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 60% 90%, rgba(244,120,32,0.1) 0%, transparent 40%);
+  }
+  
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='1.5' fill='%23f47820' fill-opacity='0.06'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    max-width: 720px;
+  }
+  
+  .hero-title {
+    font-size: clamp(48px, 7vw, 84px);
+    font-weight: 700;
+    color: #2a1a2e;
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+  
+  .hero-title em { color: #f47820; font-style: normal; }
+  
+  .hero-sub {
+    font-size: 18px;
+    color: #8a7090;
+    font-weight: 400;
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    font-size: 10px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
+    color: #c8a8d0;
+  }
+  
+  .scroll-line {
+    width: 2px; height: 40px;
+    background: linear-gradient(to bottom, #f47820, transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+    border-radius: 2px;
+  }
+  
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+  
+  /* HHT SECTION */
+  .hht-section { padding: 100px 0; background: #fff; }
+  
+  .hht-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: start; }
+  
+  .hht-text h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 24px; }
+  .hht-text p { font-size: 15px; color: #6a5a70; line-height: 1.8; margin-bottom: 16px; }
+  
+  .hht-card {
+    background: linear-gradient(135deg, #2a1a2e, #4a2a5e);
+    border-radius: 20px;
+    padding: 40px 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(42,26,46,0.2);
+  }
+  
+  .hht-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(to right, #f47820, #e8407a, #9b4fa6);
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .hht-stat { padding: 16px 0; }
+  .hht-stat-num { font-family: 'Quicksand', sans-serif; font-size: 34px; font-weight: 700; color: #f47820; line-height: 1.1; margin-bottom: 6px; }
+  .hht-stat-label { font-size: 13px; color: #c8a8d0; line-height: 1.5; }
+  .hht-divider { height: 1px; background: rgba(244,120,32,0.15); }
+  
+  .hht-ribbon {
+    position: absolute;
+    top: 20px; right: -24px;
+    background: #e8407a;
+    color: #fff;
+    font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+    padding: 6px 36px;
+    transform: rotate(45deg);
+  }
+  
+  /* FUNDRAISERS */
+  .fundraisers-section { padding: 100px 0; background: var(--soft); }
+  .fundraisers-title { font-size: clamp(32px, 4vw, 48px); text-align: center; margin-bottom: 16px; }
+  .fundraisers-sub { text-align: center; font-size: 16px; color: #8a7090; max-width: 480px; margin: 0 auto 56px; line-height: 1.7; }
+  
+  .fundraisers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  
+  .fundraiser-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px;
+    border-bottom: 4px solid transparent;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 20px rgba(42,26,46,0.06);
+  }
+  .fundraiser-card:hover { border-color: #f47820; transform: translateY(-6px); box-shadow: 0 16px 40px rgba(244,120,32,0.15); }
+  .fundraiser-emoji { font-size: 40px; margin-bottom: 20px; }
+  .fundraiser-card h3 { font-size: 20px; margin-bottom: 12px; }
+  .fundraiser-card p { font-size: 14px; color: #8a7090; line-height: 1.7; }
+  
+  /* DEAR GRACE */
+  .dear-grace-section { padding: 100px 0; background: #fff; }
+  .dear-grace-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  
+  .dear-grace-quote {
+    background: linear-gradient(135deg, #2a1a2e, #4a2a5e);
+    border-radius: 20px;
+    padding: 56px 48px;
+    position: relative;
+    box-shadow: 0 16px 48px rgba(42,26,46,0.2);
+  }
+  
+  .quote-mark { font-family: 'Quicksand', sans-serif; font-size: 100px; color: rgba(244,120,32,0.25); line-height: 0.7; margin-bottom: 16px; }
+  blockquote { font-family: 'Quicksand', sans-serif; font-size: 20px; font-style: italic; color: #f0ddf8; line-height: 1.7; font-weight: 500; margin-bottom: 24px; }
+  cite { font-size: 13px; color: #a888b0; font-style: normal; }
+  cite em { color: #f47820; font-style: normal; }
+  
+  .dear-grace-info h2 { font-size: clamp(30px, 3.5vw, 44px); margin-bottom: 20px; line-height: 1.2; }
+  .dear-grace-info p { font-size: 15px; color: #6a5a70; line-height: 1.8; margin-bottom: 16px; }
+  .dear-grace-info em { color: #f47820; font-style: normal; font-weight: 700; }
+  
+  /* CTA */
+  .cta-section { padding: 100px 0; background: linear-gradient(135deg, #f47820, #e8407a); }
+  .cta-inner { text-align: center; max-width: 600px; margin: 0 auto; }
+  .cta-inner h2 { font-size: clamp(36px, 5vw, 60px); color: #fff; margin-bottom: 20px; line-height: 1.15; }
+  .cta-inner h2 em { color: rgba(255,255,255,0.75); font-style: normal; }
+  .cta-inner p { font-size: 16px; color: rgba(255,255,255,0.85); line-height: 1.75; margin-bottom: 36px; }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  
+  @media (max-width: 768px) {
+    .hht-inner { grid-template-columns: 1fr; }
+    .dear-grace-inner { grid-template-columns: 1fr; }
+    .hero-content { padding-top: 120px; }
+  }
