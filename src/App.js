@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <div className="site-wrapper">
-      <Nav page={page} navigate={navigate} />
+      <Nav page={page} navigate={navigate} darkHero={page === "home"} />
       <main>
         {page === "home" && <Home navigate={navigate} />}
         {page === "about" && <About navigate={navigate} />}

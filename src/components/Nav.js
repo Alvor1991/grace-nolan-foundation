@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Nav.css";
 
-export default function Nav({ page, navigate }) {
+export default function Nav({ page, navigate, darkHero }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,7 +18,7 @@ export default function Nav({ page, navigate }) {
   ];
 
   return (
-    <nav className={`nav${scrolled ? " nav--scrolled" : ""}`}>
+    <nav className={`nav${scrolled ? " nav--scrolled" : ""}${!scrolled && !darkHero ? " nav--light-hero" : ""}`}>
       <div className="nav-inner">
         <button className="nav-logo" onClick={() => navigate("home")}>
           <span className="nav-logo-main">The Grace Nolan Foundation</span>
