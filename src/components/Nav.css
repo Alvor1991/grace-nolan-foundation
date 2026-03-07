@@ -93,3 +93,16 @@
     .nav-link { font-size: 16px; }
     .nav-donate { margin: 0; }
   }
+
+  .nav:not(.nav--scrolled) .nav-logo-main {
+    color: #fff9f5;
+  }
+  
+  .nav:not(.nav--scrolled) .nav-link {
+    color: rgba(255,255,255,0.7);
+  }
+  
+  .nav:not(.nav--scrolled) .nav-link:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+  }

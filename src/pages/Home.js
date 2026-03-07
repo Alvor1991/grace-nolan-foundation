@@ -1,4 +1,7 @@
 import logo from "../logo.png";
+import grace1 from "../grace1.jpg";
+import grace2 from "../grace2.jpg";
+import grace3 from "../grace3.jpg";
 import React from "react";
 import "./Home.css";
 
@@ -6,7 +9,7 @@ export default function Home({ navigate }) {
   const fundraisers = [
     { emoji: "⛳", title: "Golf Days", desc: "Annual charity golf days bringing together friends, families and the community in Grace's honour. A day of fun, competition and fundraising." },
     { emoji: "🏃", title: "Cork City Marathon", desc: "Every June, our team laces up for the Cork City Marathon, running in Grace's memory and raising vital funds for HHT awareness." },
-    { emoji: "📖", title: "Dear Grace Book", desc: "Primary school pupils wrote heartfelt letters to Grace in heaven. The most touching letters were compiled into a beautiful book — still available to purchase." },
+    { emoji: "📖", title: "Dear Grace Book", desc: "Primary school pupils wrote heartfelt letters to Grace in heaven. The most touching letters were compiled into a beautiful book — still available to purchase.", action: true },
   ];
 
   return (
@@ -32,6 +35,28 @@ export default function Home({ navigate }) {
               </div>
             </div>
             <img src={logo} alt="Grace Nolan Foundation" className="hero-logo fade-up" />
+          </div>
+        </div>
+      </section>
+
+      {/* IN MEMORY OF GRACE SECTION */}
+      <section className="grace-memory-section">
+        <div className="container">
+          <div className="section-label" style={{textAlign: "center"}}>In Memory</div>
+          <h2 className="grace-memory-title">Grace Nolan</h2>
+          <p className="grace-memory-desc">
+            Inspired by the ebullient life of Grace Nolan, who died aged 9 from HHT.
+          </p>
+          <div className="grace-photos">
+            <div className="grace-photo-wrap">
+              <img src={grace1} alt="Grace Nolan" />
+            </div>
+            <div className="grace-photo-wrap grace-photo-wrap--tall">
+              <img src={grace2} alt="Grace Nolan" />
+            </div>
+            <div className="grace-photo-wrap">
+              <img src={grace3} alt="Grace Nolan" />
+            </div>
           </div>
         </div>
       </section>
@@ -68,54 +93,33 @@ export default function Home({ navigate }) {
       </section>
 
       <section className="fundraisers-section">
-        <div className="container">
-          <div className="section-label" style={{textAlign: "center"}}>How We Fundraise</div>
-          <h2 className="fundraisers-title">Ways We Honour Grace</h2>
-          <p className="fundraisers-sub">Every event, every step, every letter written — all in Grace's name, all to make a difference.</p>
-          <div className="fundraisers-grid">
-            {fundraisers.map((f, i) => (
-              <div key={i} className="fundraiser-card">
-                <div className="fundraiser-emoji">{f.emoji}</div>
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
-              </div>
-            ))}
-          </div>
+  <div className="container">
+    <div className="section-label" style={{textAlign: "center"}}>How We Fundraise</div>
+    <h2 className="fundraisers-title">Join Us in Making a Difference</h2>
+    <p className="fundraisers-sub">Every event, every step, every letter written — all in Grace's name, all to make a difference.</p>
+    <div className="fundraisers-grid">
+      {fundraisers.map((f, i) => (
+        <div key={i} className="fundraiser-card">
+          <div className="fundraiser-emoji">{f.emoji}</div>
+          <h3>{f.title}</h3>
+          <p>{f.desc}</p>
+          {f.action && (
+            <button className="fundraiser-btn" onClick={() => navigate("about")}>
+              Learn More →
+            </button>
+          )}
         </div>
-      </section>
-
-      <section className="dear-grace-section">
-        <div className="container">
-          <div className="dear-grace-inner">
-            <div className="dear-grace-quote">
-              <div className="quote-mark">"</div>
-              <blockquote>Dear Grace, even though I never met you, I feel like I know you through the love your family carries every single day.</blockquote>
-              <cite>— From a letter in <em>Dear Grace</em></cite>
-            </div>
-            <div className="dear-grace-info">
-              <div className="section-label">Dear Grace</div>
-              <h2>A Book Born From<br />Young Hearts</h2>
-              <p>For several years, 5th and 6th class pupils across Ireland were invited to write a letter to Grace in heaven. The most moving and beautiful letters were carefully selected and compiled into a book called <em>Dear Grace</em> — a testament to how one life can touch so many others.</p>
-              <p>Copies of <em>Dear Grace</em> are still available to purchase, with all proceeds going directly to the foundation.</p>
-              <button className="btn-primary" onClick={() => navigate("contact")}>Get Your Copy</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-inner">
-            <h2>Join Us in Making<br /><em>a Difference</em></h2>
-            <p>Whether you run, golf, donate or simply share — every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
-            <div className="cta-actions">
-              <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
-              <button className="btn-outline" style={{borderColor: "#fff", color: "#fff"}} onClick={() => navigate("about")}>Read Our Story</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      ))}
+    </div>
+    <div className="fundraisers-cta">
+      <p>Every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
+      <div className="fundraisers-cta-actions">
+        <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
+        <button className="btn-outline" onClick={() => navigate("about")}>Read Our Story</button>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 }

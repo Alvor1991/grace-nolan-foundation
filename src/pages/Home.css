@@ -172,15 +172,112 @@
   .dear-grace-info em { color: #f47820; font-style: normal; font-weight: 700; }
   
   /* CTA */
-  .cta-section { padding: 100px 0; background: linear-gradient(135deg, #f47820, #e8407a); }
-  .cta-inner { text-align: center; max-width: 600px; margin: 0 auto; }
-  .cta-inner h2 { font-size: clamp(36px, 5vw, 60px); color: #fff; margin-bottom: 20px; line-height: 1.15; }
-  .cta-inner h2 em { color: rgba(255,255,255,0.75); font-style: normal; }
-  .cta-inner p { font-size: 16px; color: rgba(255,255,255,0.85); line-height: 1.75; margin-bottom: 36px; }
-  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .fundraisers-cta {
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .fundraisers-cta h3 {
+    font-size: clamp(28px, 3.5vw, 40px);
+    margin-bottom: 16px;
+  }
+  
+  .fundraisers-cta p {
+    font-size: 16px;
+    color: #8a7090;
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.75;
+  }
+  
+  .fundraisers-cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   
   @media (max-width: 768px) {
     .hht-inner { grid-template-columns: 1fr; }
     .dear-grace-inner { grid-template-columns: 1fr; }
     .hero-content { padding-top: 120px; }
   }
+
+  /* IN MEMORY SECTION */
+.grace-memory-section {
+  padding: 100px 0;
+  background: var(--soft);
+}
+
+.grace-memory-title {
+  font-size: clamp(36px, 4vw, 52px);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.grace-memory-desc {
+  text-align: center;
+  font-size: 17px;
+  color: #8a7090;
+  max-width: 560px;
+  margin: 0 auto 56px;
+  line-height: 1.75;
+}
+
+.grace-photos {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.grace-photo-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(42,26,46,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grace-photo-wrap:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(244,120,32,0.2);
+}
+
+.grace-photo-wrap img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.grace-photo-wrap--tall img {
+  height: 380px;
+}
+
+@media (max-width: 768px) {
+  .grace-photos {
+    grid-template-columns: 1fr;
+  }
+  .grace-photo-wrap img,
+  .grace-photo-wrap--tall img {
+    height: 260px;
+  }
+}
+
+.fundraiser-btn {
+  background: none;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #f47820;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 12px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.fundraiser-btn:hover { color: #e8407a; }
