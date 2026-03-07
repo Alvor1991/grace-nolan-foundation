@@ -103,16 +103,6 @@
   .hht-stat-label { font-size: 13px; color: #c8a8d0; line-height: 1.5; }
   .hht-divider { height: 1px; background: rgba(244,120,32,0.15); }
   
-  .hht-ribbon {
-    position: absolute;
-    top: 20px; right: -24px;
-    background: #e8407a;
-    color: #fff;
-    font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
-    padding: 6px 36px;
-    transform: rotate(45deg);
-  }
-  
   /* FUNDRAISERS */
   .fundraisers-section { padding: 100px 0; background: var(--soft); }
   .fundraisers-title { font-size: clamp(32px, 4vw, 48px); text-align: center; margin-bottom: 16px; }
