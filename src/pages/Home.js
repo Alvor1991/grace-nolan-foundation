@@ -115,7 +115,7 @@ export default function Home({ navigate }) {
       <p>Every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
       <div className="fundraisers-cta-actions">
         <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
-        <button className="btn-outline" onClick={() => navigate("about")}>Read Our Story</button>
+        <button className="btn-outline" style={{borderColor: "#e8407a", color: "#e8407a"}} onClick={() => navigate("about")}>Read Our Story</button>
       </div>
     </div>
   </div>

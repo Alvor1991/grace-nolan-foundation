@@ -98,7 +98,7 @@ export default function About({ navigate }) {
             </div>
             <div className="book-info">
               <div className="section-label">The Dear Grace Book</div>
-              <h2>Letters That Will<br />Move You to Tears</h2>
+              <h2>A Book Born<br />From Young Hearts</h2>
               <p>For several years, we invited primary school children across Ireland to put pen to paper and write a letter to Grace. The results were extraordinary — children who had never met Grace wrote with such empathy, innocence and love that it moved everyone who read them.</p>
               <p>These letters were compiled into <em>Dear Grace</em>, a published book that has brought comfort and inspiration to many families. Every copy sold goes directly towards HHT awareness and research.</p>
               <div className="book-cta">
