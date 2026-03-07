@@ -1,3 +1,4 @@
+import logo from "../logo.png";
 import React from "react";
 import "./Home.css";
 
@@ -14,23 +15,24 @@ export default function Home({ navigate }) {
       <section className="hero">
         <div className="hero-bg" />
         <div className="hero-content container">
-          <div className="section-label fade-up">The Grace Nolan Foundation</div>
-          <h1 className="hero-title fade-up-2">
-            In Loving Memory<br />
-            <em>of Grace Nolan</em>
-          </h1>
-          <p className="hero-sub fade-up-3">
-            Raising awareness for HHT — a rare hereditary blood vessel disorder —
-            through community, fundraising, and the enduring spirit of Grace.
-          </p>
-          <div className="hero-actions fade-up-4">
-            <button className="btn-primary" onClick={() => navigate("about")}>Our Story</button>
-            <button className="btn-outline" onClick={() => navigate("contact")}>Support Us</button>
+          <div className="hero-inner">
+            <div className="hero-text">
+              <div className="section-label fade-up">The Grace Nolan Foundation</div>
+              <h1 className="hero-title fade-up-2">
+                In Loving Memory<br />
+                <em>of Grace Nolan</em>
+              </h1>
+              <p className="hero-sub fade-up-3">
+                Raising awareness for HHT — a rare hereditary blood vessel disorder —
+                through community, fundraising, and the enduring spirit of Grace.
+              </p>
+              <div className="hero-actions fade-up-4">
+                <button className="btn-primary" onClick={() => navigate("about")}>Our Story</button>
+                <button className="btn-outline" style={{borderColor: "#e8407a", color: "#e8407a"}} onClick={() => navigate("contact")}>Support Us</button>
+              </div>
+            </div>
+            <img src={logo} alt="Grace Nolan Foundation" className="hero-logo fade-up" />
           </div>
-        </div>
-        <div className="hero-scroll-hint fade-up-5">
-          <span>Scroll</span>
-          <div className="scroll-line" />
         </div>
       </section>
 
@@ -60,7 +62,6 @@ export default function Home({ navigate }) {
                 <div className="hht-stat-num">Often years</div>
                 <div className="hht-stat-label">Average time to correct diagnosis</div>
               </div>
-              <div className="hht-ribbon">Rare Disease</div>
             </div>
           </div>
         </div>
@@ -109,7 +110,7 @@ export default function Home({ navigate }) {
             <p>Whether you run, golf, donate or simply share — every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
             <div className="cta-actions">
               <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
-              <button className="btn-outline" style={{borderColor: "#e8d5b0", color: "#e8d5b0"}} onClick={() => navigate("about")}>Read Our Story</button>
+              <button className="btn-outline" style={{borderColor: "#fff", color: "#fff"}} onClick={() => navigate("about")}>Read Our Story</button>
             </div>
           </div>
         </div>
