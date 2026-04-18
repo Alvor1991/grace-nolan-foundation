@@ -213,7 +213,7 @@ cite em { color: #f47820; font-style: normal; }
 @media (max-width: 768px) {
   .hht-inner { grid-template-columns: 1fr; }
   .dear-grace-inner { grid-template-columns: 1fr; }
-  .hero-content { padding-top: 120px; }
+  .hero-content { padding-top: 40px; padding-bottom: 24px; }
 }
 
 /* IN MEMORY SECTION */
