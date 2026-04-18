@@ -153,11 +153,7 @@ export default function Donate() {
                 <div className="donate-impact-desc">Supports a family newly diagnosed with HHT through our network</div>
               </div>
             </div>
-            <div className="donate-quote">
-              <p>"Every act of kindness keeps Grace's memory alive."</p>
-            </div>
           </div>
-
         </div>
       </section>
     </div>
