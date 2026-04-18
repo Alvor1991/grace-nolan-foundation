@@ -1,0 +1,348 @@
+/* â”€â”€ Donate Page â”€â”€ */
+.donate-page {
+    min-height: 100vh;
+    background: #fff9f5;
+  }
+  
+  /* Hero */
+  .donate-hero {
+    position: relative;
+    padding: 140px 28px 80px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .donate-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #6b2d6e 0%, #9b3d7a 50%, #c0507a 100%);
+    z-index: 0;
+  }
+  
+  .donate-hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(244,120,32,0.18) 0%, transparent 70%);
+  }
+  
+  .donate-hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .donate-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 12px 0 20px;
+    line-height: 1.15;
+  }
+  
+  .donate-title em {
+    font-style: italic;
+    color: #f9c6d8;
+  }
+  
+  .donate-sub {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* Section */
+  .donate-section {
+    padding: 64px 28px 80px;
+  }
+  
+  .donate-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Card */
+  .donate-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 40px rgba(107,45,110,0.10);
+    border: 1px solid rgba(107,45,110,0.08);
+  }
+  
+  .donate-card-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .donate-heart {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+  }
+  
+  .donate-card-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2a1a2e;
+    margin: 0 0 8px;
+  }
+  
+  .donate-card-header p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: #8a7090;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Presets */
+  .donate-presets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  
+  .donate-preset {
+    background: #f9f0fa;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 14px 8px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #6b2d6e;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .donate-preset:hover {
+    border-color: #6b2d6e;
+    background: #f0e0f5;
+  }
+  
+  .donate-preset.active {
+    background: #6b2d6e;
+    color: #fff;
+    border-color: #6b2d6e;
+    box-shadow: 0 4px 16px rgba(107,45,110,0.25);
+  }
+  
+  /* Custom input */
+  .donate-custom-wrap {
+    margin-bottom: 24px;
+  }
+  
+  .donate-custom-label {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #8a7090;
+    margin-bottom: 8px;
+  }
+  
+  .donate-custom-input-wrap {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e8dcea;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+    background: #faf5fb;
+  }
+  
+  .donate-custom-input-wrap.active,
+  .donate-custom-input-wrap:focus-within {
+    border-color: #6b2d6e;
+    background: #fff;
+  }
+  
+  .donate-currency {
+    padding: 0 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #6b2d6e;
+    border-right: 2px solid #e8dcea;
+  }
+  
+  .donate-custom-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 14px 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2a1a2e;
+    outline: none;
+  }
+  
+  .donate-custom-input::placeholder {
+    color: #c0aec8;
+  }
+  
+  /* Hide number input arrows */
+  .donate-custom-input::-webkit-outer-spin-button,
+  .donate-custom-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Error */
+  .donate-error {
+    background: #fef0f0;
+    border: 1px solid #f5c6c6;
+    color: #c0365e;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  
+  /* Donate Button */
+  .donate-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  
+  .donate-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  
+  .donate-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .donate-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Secure notice */
+  .donate-secure {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    color: #a090a8;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Impact Panel */
+  .donate-impact {
+    padding: 8px 0;
+  }
+  
+  .donate-impact h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2a1a2e;
+    margin: 0 0 24px;
+  }
+  
+  .donate-impact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .donate-impact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(107,45,110,0.08);
+    box-shadow: 0 2px 12px rgba(107,45,110,0.05);
+  }
+  
+  .donate-impact-amount {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #6b2d6e;
+    min-width: 48px;
+    padding-top: 1px;
+  }
+  
+  .donate-impact-desc {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: #5a4a62;
+    line-height: 1.5;
+  }
+  
+  .donate-quote {
+    background: linear-gradient(135deg, #6b2d6e, #c0507a);
+    border-radius: 16px;
+    padding: 24px 28px;
+  }
+  
+  .donate-quote p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #fff;
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+  
+  /* Responsive */
+  @media (max-width: 780px) {
+    .donate-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .donate-impact {
+      order: -1;
+    }
+  
+    .donate-hero {
+      padding: 120px 20px 60px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .donate-presets {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .donate-card {
+      padding: 28px 20px;
+    }
+  }
