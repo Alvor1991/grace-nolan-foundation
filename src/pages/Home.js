@@ -20,13 +20,12 @@ export default function Home({ navigate }) {
         <div className="hero-content container">
           <div className="hero-inner">
             <div className="hero-text">
-              <div className="section-label fade-up">The Grace Nolan Foundation</div>
               <h1 className="hero-title fade-up-2">
                 Inspired by<br />
                 <em>Grace Nolan</em>
               </h1>
               <p className="hero-sub fade-up-3">
-                Raising awareness for HHT, a rare but often overlooked genetic condition.
+                Raising awareness for HHT.
               </p>
               <div className="hero-actions fade-up-4">
                 <button className="btn-primary" onClick={() => navigate("about")}>Our Story</button>
