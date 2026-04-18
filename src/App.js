@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Donate from "./pages/Donate";
+import DonateSuccess from "./pages/DonateSuccess";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import "./styles/global.css";
@@ -17,11 +19,13 @@ export default function App() {
 
   return (
     <div className="site-wrapper">
-      <Nav page={page} navigate={navigate} darkHero={page === "home"} />
+      <Nav page={page} navigate={navigate} darkHero={page === "home" || page === "donate"} />
       <main>
         {page === "home" && <Home navigate={navigate} />}
         {page === "about" && <About navigate={navigate} />}
         {page === "contact" && <Contact navigate={navigate} />}
+        {page === "donate" && <Donate />}
+        {page === "donate-success" && <DonateSuccess navigate={navigate} />}
       </main>
       <Footer navigate={navigate} />
     </div>

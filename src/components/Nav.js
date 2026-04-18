@@ -33,7 +33,7 @@ export default function Nav({ page, navigate, darkHero }) {
               {l.label}
             </button>
           ))}
-          <button className="nav-donate btn-primary" onClick={() => navigate("contact")}>Donate</button>
+          <button className="nav-donate btn-primary" onClick={() => navigate("donate")}>Donate</button>
         </div>
         <button className="nav-burger" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
           <span /><span /><span />
