@@ -17,7 +17,7 @@ export default function Home({ navigate }) {
 
       <section className="hero">
         <div className="hero-bg" />
-        <div className="hero-content">
+        <div className="hero-content container">
           <div className="hero-inner">
             <div className="hero-text">
               <h1 className="hero-title fade-up-2">
@@ -89,32 +89,33 @@ export default function Home({ navigate }) {
       </section>
 
       <section className="fundraisers-section">
-  <div className="container">
-    <div className="section-label" style={{textAlign: "center"}}>How We Fundraise</div>
-    <h2 className="fundraisers-title">Join Us in Making a Difference</h2>
-    <p className="fundraisers-sub">Every event, every step, every letter written — all in Grace's name, all to make a difference.</p>
-    <div className="fundraisers-grid">
-      {fundraisers.map((f, i) => (
-        <div key={i} className="fundraiser-card">
-          <div className="fundraiser-emoji">{f.emoji}</div>
-          <h3>{f.title}</h3>
-          <p>{f.desc}</p>
-          {f.action && (
-            <button className="fundraiser-btn" onClick={() => navigate("about")}>
-              Learn More →
-            </button>
-          )}
+        <div className="container">
+          <div className="section-label" style={{textAlign: "center"}}>How We Fundraise</div>
+          <h2 className="fundraisers-title">Join Us in Making a Difference</h2>
+          <p className="fundraisers-sub">Every event, every step, every letter written — all in Grace's name, all to make a difference.</p>
+          <div className="fundraisers-grid">
+            {fundraisers.map((f, i) => (
+              <div key={i} className="fundraiser-card">
+                <div className="fundraiser-emoji">{f.emoji}</div>
+                <h3>{f.title}</h3>
+                <p>{f.desc}</p>
+                {f.action && (
+                  <button className="fundraiser-btn" onClick={() => navigate("about")}>
+                    Learn More →
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="fundraisers-cta">
+            <p>Every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
+            <div className="fundraisers-cta-actions">
+              <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
+            </div>
+          </div>
         </div>
-      ))}
-    </div>
-    <div className="fundraisers-cta">
-      <p>Every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
-      <div className="fundraisers-cta-actions">
-        <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+
     </div>
   );
 }
