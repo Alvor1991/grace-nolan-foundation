@@ -23,7 +23,20 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    const formData = new FormData();
+    formData.append("form-name", "contact");
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("subject", form.subject);
+    formData.append("message", form.message);
+
+    fetch("/", {
+      method: "POST",
+      body: formData,
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => alert("Something went wrong. Please try again."));
   };
 
   return (
@@ -102,24 +115,33 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="contact-form">
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleSubmit}
+                  className="contact-form"
+                >
+                  {/* Required hidden input for Netlify Forms */}
+                  <input type="hidden" name="form-name" value="contact" />
+
                   <div className="form-group">
                     <label>Your Name</label>
-                    <input type="text" placeholder="e.g. John Murphy" value={form.name} onChange={e => setForm(f => ({...f, name: e.target.value}))} required />
+                    <input type="text" name="name" placeholder="e.g. John Murphy" value={form.name} onChange={e => setForm(f => ({...f, name: e.target.value}))} required />
                   </div>
                   <div className="form-group">
                     <label>Email Address</label>
-                    <input type="email" placeholder="your@email.com" value={form.email} onChange={e => setForm(f => ({...f, email: e.target.value}))} required />
+                    <input type="email" name="email" placeholder="your@email.com" value={form.email} onChange={e => setForm(f => ({...f, email: e.target.value}))} required />
                   </div>
                   <div className="form-group">
                     <label>Subject</label>
-                    <select value={form.subject} onChange={e => setForm(f => ({...f, subject: e.target.value}))}>
+                    <select name="subject" value={form.subject} onChange={e => setForm(f => ({...f, subject: e.target.value}))}>
                       {subjects.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
                     </select>
                   </div>
                   <div className="form-group">
                     <label>Message</label>
-                    <textarea placeholder="Tell us how you'd like to get involved, or ask us anything..." value={form.message} onChange={e => setForm(f => ({...f, message: e.target.value}))} required />
+                    <textarea name="message" placeholder="Tell us how you'd like to get involved, or ask us anything..." value={form.message} onChange={e => setForm(f => ({...f, message: e.target.value}))} required />
                   </div>
                   <button type="submit" className="btn-primary" style={{width: "100%", padding: "16px"}}>Send Message</button>
                   <p className="form-note">We aim to respond within 2–3 business days.</p>
