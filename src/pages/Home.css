@@ -26,9 +26,10 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-top: 70px;
-  padding-bottom: 50px;
-  max-width: 720px;
+  padding: 60px 28px 40px;
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero-title {
@@ -213,7 +214,7 @@ cite em { color: #f47820; font-style: normal; }
 @media (max-width: 768px) {
   .hht-inner { grid-template-columns: 1fr; }
   .dear-grace-inner { grid-template-columns: 1fr; }
-  .hero-content { padding-top: 40px; padding-bottom: 24px; }
+  .hero-content { padding: 40px 20px 24px; }
 }
 
 /* IN MEMORY SECTION */

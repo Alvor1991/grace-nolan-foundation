@@ -17,7 +17,7 @@ export default function Home({ navigate }) {
 
       <section className="hero">
         <div className="hero-bg" />
-        <div className="hero-content container">
+        <div className="hero-content">
           <div className="hero-inner">
             <div className="hero-text">
               <h1 className="hero-title fade-up-2">
