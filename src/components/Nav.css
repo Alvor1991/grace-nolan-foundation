@@ -106,3 +106,8 @@
     color: #fff;
     background: rgba(255,255,255,0.1);
   }
+
+  .nav--light-hero .nav-link.active {
+    color: #2a1a2e;
+    background: rgba(255, 255, 255, 0.85);
+  }

@@ -22,12 +22,11 @@ export default function Home({ navigate }) {
             <div className="hero-text">
               <div className="section-label fade-up">The Grace Nolan Foundation</div>
               <h1 className="hero-title fade-up-2">
-                In Loving Memory<br />
-                <em>of Grace Nolan</em>
+                Inspired by<br />
+                <em>Grace Nolan</em>
               </h1>
               <p className="hero-sub fade-up-3">
-                Raising awareness for HHT — a rare hereditary blood vessel disorder —
-                through community, fundraising, and the enduring spirit of Grace.
+                Raising awareness for HHT, a rare but often overlooked genetic condition.
               </p>
               <div className="hero-actions fade-up-4">
                 <button className="btn-primary" onClick={() => navigate("about")}>Our Story</button>
@@ -42,10 +41,8 @@ export default function Home({ navigate }) {
       {/* IN MEMORY OF GRACE SECTION */}
       <section className="grace-memory-section">
         <div className="container">
-          <div className="section-label" style={{textAlign: "center"}}>In Memory</div>
-          <h2 className="grace-memory-title">Grace Nolan</h2>
           <p className="grace-memory-desc">
-            Inspired by the ebullient life of Grace Nolan, who died aged 9 from HHT.
+            Inspired by the life of Grace Nolan, who died aged 9 from HHT.
           </p>
           <div className="grace-photos">
             <div className="grace-photo-wrap">
@@ -70,7 +67,7 @@ export default function Home({ navigate }) {
               <p>Hereditary Haemorrhagic Telangiectasia (HHT) is a rare genetic disorder that affects blood vessel formation. It causes abnormal connections between arteries and veins — called AVMs — which can occur in the brain, lungs, liver and digestive tract.</p>
               <p>HHT affects approximately 1 in 5,000 people worldwide, yet many go undiagnosed for years. Symptoms can include frequent nosebleeds, visible red spots on the skin, and in more serious cases, internal bleeding and organ complications.</p>
               <p>Early diagnosis saves lives. The Grace Nolan Foundation is dedicated to raising awareness so that families receive the answers and support they deserve.</p>
-              <a href="https://www.hht.org" target="_blank" rel="noreferrer" className="btn-outline" style={{marginTop: 8}}>Learn More About HHT</a>
+              <button className="btn-outline" style={{borderColor: "#e8407a", color: "#e8407a"}} onClick={() => navigate("about")}>Read Our Story</button>
             </div>
             <div className="hht-card">
               <div className="hht-stat">
@@ -115,7 +112,6 @@ export default function Home({ navigate }) {
       <p>Every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
       <div className="fundraisers-cta-actions">
         <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
-        <button className="btn-outline" style={{borderColor: "#e8407a", color: "#e8407a"}} onClick={() => navigate("about")}>Read Our Story</button>
       </div>
     </div>
   </div>

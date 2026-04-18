@@ -33,35 +33,6 @@ export default function About({ navigate }) {
               <p>When Grace passed, her family refused to let her story end. They created this foundation in her honour — not out of grief alone, but out of a fierce determination that her life would mean something beyond her years. That her name would open doors for others living with HHT who needed answers, support and hope.</p>
               <p>Today, every marathon run, every golf ball driven, every letter written by a child — all of it carries Grace's name forward. She is remembered not just by those who knew her, but by a community that grew because of her.</p>
             </div>
-            <div className="grace-story-aside">
-              <div className="grace-card">
-                <div className="grace-card-icon">🕊️</div>
-                <div className="grace-card-quote">"Her name opens hearts. Her story opens minds."</div>
-              </div>
-              <div className="foundation-values">
-                <div className="value-item">
-                  <div className="value-icon">💛</div>
-                  <div>
-                    <div className="value-title">Awareness</div>
-                    <div className="value-text">Shining a light on HHT so no family waits years for a diagnosis.</div>
-                  </div>
-                </div>
-                <div className="value-item">
-                  <div className="value-icon">🤝</div>
-                  <div>
-                    <div className="value-title">Community</div>
-                    <div className="value-text">Bringing people together through sport, creativity and shared purpose.</div>
-                  </div>
-                </div>
-                <div className="value-item">
-                  <div className="value-icon">🌱</div>
-                  <div>
-                    <div className="value-title">Hope</div>
-                    <div className="value-text">Funding research and support for those living with HHT today.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
