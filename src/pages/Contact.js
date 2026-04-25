@@ -37,24 +37,7 @@ export default function Contact() {
         <div className="container page-hero-content">
           <div className="section-label fade-up">Get In Touch</div>
           <h1 className="fade-up-2">Contact Us</h1>
-          <p className="fade-up-3">Whether you want to donate, get involved, order a Dear Grace book, or simply learn more — we'd love to hear from you.</p>
-        </div>
-      </section>
-
-      <section className="ways-section">
-        <div className="container">
-          <div className="section-label" style={{textAlign:"center"}}>Support Grace's Legacy</div>
-          <h2 className="ways-title">Ways to Get Involved</h2>
-          <div className="ways-grid">
-            {ways.map((w, i) => (
-              <div key={i} className="way-card">
-                <div className="way-emoji">{w.emoji}</div>
-                <h3>{w.title}</h3>
-                <p>{w.desc}</p>
-                <div className="way-action">{w.action} →</div>
-              </div>
-            ))}
-          </div>
+          <p className="fade-up-3">Whether you want to donate, get involved, or simply learn more — we'd love to hear from you.</p>
         </div>
       </section>
 
@@ -62,31 +45,8 @@ export default function Contact() {
         <div className="container">
           <div className="form-inner">
             <div className="form-info">
-              <div className="section-label">Reach Out</div>
-              <h2>Send Us a<br />Message</h2>
-              <p>We're a small, passionate team. Every message is read personally. Whether you have a question about HHT, want to order a book, or are interested in our events — please don't hesitate to reach out.</p>
-              <div className="contact-details">
-                <div className="contact-detail">
-                  <div className="contact-detail-icon">📍</div>
-                  <div>
-                    <div className="contact-detail-label">Based In</div>
-                    <div className="contact-detail-value">Cork, Ireland</div>
-                  </div>
-                </div>
-                <div className="contact-detail">
-                  <div className="contact-detail-icon">📱</div>
-                  <div>
-                    <div className="contact-detail-label">Follow Us</div>
-                    <div className="contact-detail-value">
-                      <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-                      {" · "}
-                      <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h2>Send Us a Message</h2>
             </div>
-
             <div className="form-wrap">
               {submitted ? (
                 <div className="form-success">
