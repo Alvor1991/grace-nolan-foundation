@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../logo.png";
 import "./Donate.css";
 
 const PRESET_AMOUNTS = [10, 25, 50, 100];
@@ -134,26 +135,26 @@ export default function Donate() {
 
           {/* Impact panel */}
           <div className="donate-impact">
-            <h3>Your Impact</h3>
+            <div className="donate-logo-wrap">
+              <img src={logo} alt="Grace Nolan Foundation" className="donate-logo" />
+            </div>
+            <h3>Where Your Donation Goes</h3>
             <div className="donate-impact-items">
               <div className="donate-impact-item">
-                <div className="donate-impact-amount">€10</div>
-                <div className="donate-impact-desc">Helps print and distribute HHT awareness leaflets to GP surgeries</div>
+                <div className="donate-impact-amount">🎗️</div>
+                <div className="donate-impact-desc">Raising awareness of HHT across Ireland so more families get the answers they deserve</div>
               </div>
               <div className="donate-impact-item">
-                <div className="donate-impact-amount">€25</div>
-                <div className="donate-impact-desc">Funds a school visit to educate children about rare conditions</div>
+                <div className="donate-impact-amount">🏥</div>
+                <div className="donate-impact-desc">Contributing to HHT research and earlier diagnosis for families across the country</div>
               </div>
               <div className="donate-impact-item">
-                <div className="donate-impact-amount">€50</div>
-                <div className="donate-impact-desc">Contributes to HHT research partnerships in Ireland</div>
-              </div>
-              <div className="donate-impact-item">
-                <div className="donate-impact-amount">€100</div>
-                <div className="donate-impact-desc">Supports a family newly diagnosed with HHT through our network</div>
+                <div className="donate-impact-amount">🤝</div>
+                <div className="donate-impact-desc">Building a community of support for those affected by HHT and their loved ones</div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </div>

@@ -321,6 +321,18 @@
     line-height: 1.6;
     opacity: 0.95;
   }
+
+  .donate-logo-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 4px;
+  }
+  
+  .donate-logo {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+  }
   
   /* Responsive */
   @media (max-width: 780px) {

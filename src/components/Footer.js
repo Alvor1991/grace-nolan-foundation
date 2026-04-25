@@ -27,10 +27,7 @@ export default function Footer({ navigate }) {
             </div>
             <div className="footer-col">
               <div className="footer-col-title">Get Involved</div>
-              <button onClick={() => navigate("contact")}>Donate</button>
-              <button onClick={() => navigate("contact")}>Cork Marathon</button>
-              <button onClick={() => navigate("contact")}>Golf Days</button>
-              <button onClick={() => navigate("about")}>Dear Grace Book</button>
+              <button onClick={() => navigate("donate")}>Donate</button>
             </div>
             <div className="footer-col">
               <div className="footer-col-title">About HHT</div>

@@ -111,3 +111,26 @@
     color: #2a1a2e;
     background: rgba(255, 255, 255, 0.85);
   }
+
+  @media (max-width: 700px) {
+    .nav--light-hero .nav-link {
+      color: #2a1a2e;
+    }
+    .nav--light-hero .nav-link:hover {
+      color: #f47820;
+      background: #fde8d4;
+    }
+    .nav--light-hero .nav-logo-main {
+      color: #2a1a2e;
+    }
+    .nav--light-hero .nav-link.active {
+      color: #2a1a2e;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  @media (min-width: 701px) {
+    .nav--light-hero .nav-logo-main {
+      color: #fff9f5;
+    }
+  }

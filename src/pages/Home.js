@@ -21,15 +21,15 @@ export default function Home({ navigate }) {
           <div className="hero-inner">
             <div className="hero-text">
               <h1 className="hero-title fade-up-2">
-                Inspired by<br />
-                <em>Grace Nolan</em>
+              Raising awareness<br />
+                <em>for HHT</em>
               </h1>
               <p className="hero-sub fade-up-3">
-                Raising awareness for HHT.
+              A family-founded charity dedicated to making a real difference.
               </p>
               <div className="hero-actions fade-up-4">
                 <button className="btn-primary" onClick={() => navigate("about")}>Our Story</button>
-                <button className="btn-outline" style={{borderColor: "#e8407a", color: "#e8407a"}} onClick={() => navigate("contact")}>Support Us</button>
+                <button className="btn-outline" style={{borderColor: "#e8407a", color: "#e8407a"}} onClick={() => navigate("contact")}>Contact Us</button>
               </div>
             </div>
             <img src={logo} alt="Grace Nolan Foundation" className="hero-logo fade-up" />
@@ -41,7 +41,7 @@ export default function Home({ navigate }) {
       <section className="grace-memory-section">
         <div className="container">
           <p className="grace-memory-desc">
-            Inspired by the life of Grace Nolan, who died aged 9 from HHT.
+            Inspired by the life of Grace Nolan.
           </p>
           <div className="grace-photos">
             <div className="grace-photo-wrap">
@@ -54,6 +54,14 @@ export default function Home({ navigate }) {
               <img src={grace3} alt="Grace Nolan" />
             </div>
           </div>
+          <div className="grace-cta">
+      <button
+        className="btn-primary"
+        onClick={() => navigate("about")}
+      >
+        Read Our Story
+      </button>
+    </div>
         </div>
       </section>
 
@@ -66,7 +74,28 @@ export default function Home({ navigate }) {
               <p>Hereditary Haemorrhagic Telangiectasia (HHT) is a rare genetic disorder that affects blood vessel formation. It causes abnormal connections between arteries and veins — called AVMs — which can occur in the brain, lungs, liver and digestive tract.</p>
               <p>HHT affects approximately 1 in 5,000 people worldwide, yet many go undiagnosed for years. Symptoms can include frequent nosebleeds, visible red spots on the skin, and in more serious cases, internal bleeding and organ complications.</p>
               <p>Early diagnosis saves lives. The Grace Nolan Foundation is dedicated to raising awareness so that families receive the answers and support they deserve.</p>
-              <button className="btn-outline" style={{borderColor: "#e8407a", color: "#e8407a"}} onClick={() => navigate("about")}>Read Our Story</button>
+              <div className="section-label">Trusted Resources</div>
+              <div className="hht-links">
+  <a 
+    className="btn-outline"
+    style={{ borderColor: "#e8407a", color: "#e8407a" }}
+    href="https://hhtireland.org/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    HHT Ireland
+  </a>
+
+  <a 
+    className="btn-outline"
+    style={{ borderColor: "#e8407a", color: "#e8407a" }}
+    href="https://www.curehht.org"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Cure HHT
+  </a>
+</div>
             </div>
             <div className="hht-card">
               <div className="hht-stat">
