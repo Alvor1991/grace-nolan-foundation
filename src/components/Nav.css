@@ -97,6 +97,25 @@
   transition: all 0.3s;
 }
 
+/* DESKTOP LIGHT HERO (purple pages) */
+.nav--light-hero .nav-logo-main {
+  color: #fff9f5;
+}
+
+.nav--light-hero .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav--light-hero .nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav--light-hero .nav-link.active {
+  color: #2a1a2e;
+  background: rgba(255, 255, 255, 0.85);
+}
+
 /* MOBILE MENU */
 @media (max-width: 700px) {
   .nav-burger {
@@ -131,31 +150,23 @@
   .nav-donate {
     margin: 0;
   }
-}
 
-/* MOBILE LIGHT HERO OVERRIDES */
-@media (max-width: 700px) {
-  .nav--light-hero .nav-link {
+  /* Only override colours when menu is open */
+  .nav--menu-open .nav-link {
     color: #2a1a2e;
   }
 
-  .nav--light-hero .nav-link:hover {
+  .nav--menu-open .nav-link:hover {
     color: #f47820;
     background: #fde8d4;
   }
 
-  .nav--light-hero .nav-logo-main {
+  .nav--menu-open .nav-logo-main {
     color: #2a1a2e;
   }
 
-  .nav--light-hero .nav-link.active {
+  .nav--menu-open .nav-link.active {
     color: #2a1a2e;
     background: rgba(255, 255, 255, 0.85);
-  }
-}
-
-@media (min-width: 701px) {
-  .nav--light-hero .nav-logo-main {
-    color: #fff9f5;
   }
 }

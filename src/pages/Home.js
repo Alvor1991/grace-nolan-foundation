@@ -21,11 +21,11 @@ export default function Home({ navigate }) {
           <div className="hero-inner">
             <div className="hero-text">
               <h1 className="hero-title fade-up-2">
-              Raising awareness<br />
+                Raising awareness<br />
                 <em>for HHT</em>
               </h1>
               <p className="hero-sub fade-up-3">
-              A family-founded charity dedicated to making a real difference.
+                A family-founded charity dedicated to making a real difference.
               </p>
               <div className="hero-actions fade-up-4">
                 <button className="btn-primary" onClick={() => navigate("about")}>Our Story</button>
@@ -55,13 +55,10 @@ export default function Home({ navigate }) {
             </div>
           </div>
           <div className="grace-cta">
-      <button
-        className="btn-primary"
-        onClick={() => navigate("about")}
-      >
-        Read Our Story
-      </button>
-    </div>
+            <button className="btn-primary" onClick={() => navigate("about")}>
+              Read Our Story
+            </button>
+          </div>
         </div>
       </section>
 
@@ -74,76 +71,52 @@ export default function Home({ navigate }) {
               <p>Hereditary Haemorrhagic Telangiectasia (HHT) is a rare genetic disorder that affects blood vessel formation. It causes abnormal connections between arteries and veins — called AVMs — which can occur in the brain, lungs, liver and digestive tract.</p>
               <p>HHT affects approximately 1 in 5,000 people worldwide, yet many go undiagnosed for years. Symptoms can include frequent nosebleeds, visible red spots on the skin, and in more serious cases, internal bleeding and organ complications.</p>
               <p>Early diagnosis saves lives. The Grace Nolan Foundation is dedicated to raising awareness so that families receive the answers and support they deserve.</p>
-              <div className="section-label">Trusted Resources</div>
-              <div className="hht-links">
-  <a 
-    className="btn-outline"
-    style={{ borderColor: "#e8407a", color: "#e8407a" }}
-    href="https://hhtireland.org/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    HHT Ireland
-  </a>
-
-  <a 
-    className="btn-outline"
-    style={{ borderColor: "#e8407a", color: "#e8407a" }}
-    href="https://www.curehht.org"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Cure HHT
-  </a>
-</div>
             </div>
             <div className="hht-card">
               <div className="hht-stat">
                 <div className="hht-stat-num">1 in 5,000</div>
-                <div className="hht-stat-label">People affected by HHT worldwide</div>
+                <div className="hht-stat-label">People worldwide are affected by HHT</div>
               </div>
               <div className="hht-divider" />
               <div className="hht-stat">
-                <div className="hht-stat-num">~200,000</div>
-                <div className="hht-stat-label">People in the USA living with HHT</div>
+                <div className="hht-stat-num">50%</div>
+                <div className="hht-stat-label">Chance a child will inherit the disorder if one parent has it</div>
               </div>
               <div className="hht-divider" />
               <div className="hht-stat">
-                <div className="hht-stat-num">Often years</div>
-                <div className="hht-stat-label">Average time to correct diagnosis</div>
+                <div className="hht-stat-num">95%</div>
+                <div className="hht-stat-label">Percentage of people with the gene who will show symptoms by age 40</div>
               </div>
+              <div className="hht-divider" />
+              <div className="hht-stat">
+                <div className="hht-stat-num">10%</div>
+                <div className="hht-stat-label">Estimated percentage of HHT patients who receive a formal diagnosis</div>
+              </div>
+            </div>
+          </div>
+          {/* Trusted Resources — outside the grid so it always sits at the bottom */}
+          <div className="hht-resources">
+            <div className="section-label">Trusted Resources</div>
+            <div className="hht-links">
+              <a className="btn-outline" style={{ borderColor: "#e8407a", color: "#e8407a" }} href="https://hhtireland.org/" target="_blank" rel="noreferrer">HHT Ireland</a>
+              <a className="btn-outline" style={{ borderColor: "#e8407a", color: "#e8407a" }} href="https://www.curehht.org" target="_blank" rel="noreferrer">Cure HHT</a>
             </div>
           </div>
         </div>
       </section>
 
       <section className="fundraisers-section">
-        <div className="container">
-          <div className="section-label" style={{textAlign: "center"}}>How We Fundraise</div>
-          <h2 className="fundraisers-title">Join Us in Making a Difference</h2>
-          <p className="fundraisers-sub">Every event, every step, every letter written — all in Grace's name, all to make a difference.</p>
-          <div className="fundraisers-grid">
-            {fundraisers.map((f, i) => (
-              <div key={i} className="fundraiser-card">
-                <div className="fundraiser-emoji">{f.emoji}</div>
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
-                {f.action && (
-                  <button className="fundraiser-btn" onClick={() => navigate("about")}>
-                    Learn More →
-                  </button>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="fundraisers-cta">
-            <p>Every act of kindness keeps Grace's memory alive and brings us closer to a world that understands HHT.</p>
-            <div className="fundraisers-cta-actions">
-              <button className="btn-primary" onClick={() => navigate("contact")}>Get Involved</button>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container">
+    <div className="section-label" style={{textAlign: "center"}}>How We Fundraise</div>
+    <h2 className="fundraisers-title">Join Us in Making a Difference</h2>
+    <div className="fundraiser-single-card">
+      <p>From charity golf days and marathon runs to the beloved Dear Grace book — our events bring communities together, raise vital funds, and keep the conversation about HHT alive across Ireland.</p>
+      <button className="btn-primary" onClick={() => navigate("about")}>
+        Learn More About Our Events →
+      </button>
+    </div>
+  </div>
+</section>
 
     </div>
   );

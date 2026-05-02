@@ -18,7 +18,7 @@ export default function Nav({ page, navigate, darkHero }) {
   ];
 
   return (
-    <nav className={`nav${scrolled ? " nav--scrolled" : ""}${!scrolled && !darkHero ? " nav--light-hero" : ""}`}>
+    <nav className={`nav${scrolled ? " nav--scrolled" : ""}${!scrolled && !darkHero ? " nav--light-hero" : ""}${menuOpen ? " nav--menu-open" : ""}`}>
       <div className="nav-inner">
         <button className="nav-logo" onClick={() => navigate("home")}>
           <span className="nav-logo-main">The Grace Nolan Foundation</span>
@@ -34,14 +34,11 @@ export default function Nav({ page, navigate, darkHero }) {
             </button>
           ))}
           <button
-  className="nav-donate btn-primary"
-  onClick={() => {
-    navigate("donate");
-    setMenuOpen(false);
-  }}
->
-  Donate
-</button>
+            className="nav-donate btn-primary"
+            onClick={() => { navigate("donate"); setMenuOpen(false); }}
+          >
+            Donate
+          </button>
         </div>
         <button className="nav-burger" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
           <span /><span /><span />
