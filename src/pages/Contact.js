@@ -5,13 +5,6 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const ways = [
-    { emoji: "📖", title: "Buy a Dear Grace Book", desc: "Purchase a copy of our Dear Grace letter book. All proceeds support the foundation.", action: "Order a Copy" },
-    { emoji: "🏃", title: "Run With Us", desc: "Join our team for the Cork City Marathon every June. Every step counts.", action: "Join the Team" },
-    { emoji: "⛳", title: "Golf Days & Trips", desc: "Take part in our charity golf days or join one of our fundraising trips.", action: "Get Involved" },
-    { emoji: "💛", title: "Make a Donation", desc: "Any donation, big or small, makes a real difference to our work and HHT awareness.", action: "Donate Now" },
-  ];
-
   const handleSubmit = (e) => {
     e.preventDefault();
 

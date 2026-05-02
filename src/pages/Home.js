@@ -6,12 +6,7 @@ import React from "react";
 import "./Home.css";
 
 export default function Home({ navigate }) {
-  const fundraisers = [
-    { emoji: "⛳", title: "Golf Days", desc: "Annual charity golf days bringing together friends, families and the community in Grace's honour. A day of fun, competition and fundraising." },
-    { emoji: "🏃", title: "Cork City Marathon", desc: "Every June, our team laces up for the Cork City Marathon, running in Grace's memory and raising vital funds for HHT awareness." },
-    { emoji: "📖", title: "Dear Grace Book", desc: "Primary school pupils wrote heartfelt letters to Grace in heaven. The most touching letters were compiled into a beautiful book — still available to purchase.", action: true },
-  ];
-
+  
   return (
     <div className="home">
 
