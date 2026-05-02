@@ -33,7 +33,7 @@
   .way-action { font-size: 12px; font-weight: 800; letter-spacing: 1px; color: #f47820; text-transform: uppercase; }
   
   .form-section { padding: 100px 0; background: #fff; }
-  .form-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
+  .form-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; align-items: start; }
   
   .form-info h2 { font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 20px; line-height: 1.2; }
   .form-info p { font-size: 15px; color: #6a5a70; line-height: 1.85; margin-bottom: 32px; }
