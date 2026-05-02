@@ -128,6 +128,10 @@
     justify-content: center;
   }
 
+  .hero-actions .btn-outline {
+    white-space: nowrap;
+  }
+
   .hero-content {
     padding-top: 40px !important;
     padding-bottom: 24px !important;
@@ -337,7 +341,7 @@ cite em { color: #f47820; font-style: normal; }
   }
   .grace-photo-wrap img,
   .grace-photo-wrap--tall img {
-    height: 290px;
+    height: 260px;
   }
 }
 

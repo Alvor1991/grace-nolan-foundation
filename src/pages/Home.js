@@ -6,7 +6,7 @@ import React from "react";
 import "./Home.css";
 
 export default function Home({ navigate }) {
-  
+
   return (
     <div className="home">
 
@@ -103,7 +103,6 @@ export default function Home({ navigate }) {
       <section className="fundraisers-section">
   <div className="container">
     <div className="section-label" style={{textAlign: "center"}}>How We Fundraise</div>
-    <h2 className="fundraisers-title">Join Us in Making a Difference</h2>
     <div className="fundraiser-single-card">
       <p>From charity golf days and marathon runs to the beloved Dear Grace book — our events bring communities together, raise vital funds, and keep the conversation about HHT alive across Ireland.</p>
       <button className="btn-primary" onClick={() => navigate("about")}>
