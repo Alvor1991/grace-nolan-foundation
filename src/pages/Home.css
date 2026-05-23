@@ -51,6 +51,12 @@
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
+.hero-bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .hero-scroll-hint {
   position: absolute;
   bottom: 40px; left: 50%;
@@ -78,64 +84,10 @@
 }
 
 .hero-logo {
-  width: 200px;
+  width: 300px;
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: column;
-    gap: 0;
-    align-items: flex-start;
-    position: relative;
-  }
-
-  .hero-logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 190px;
-    height: 190px;
-    flex-shrink: 0;
-  }
-
-  .hero-text {
-    flex: 1;
-    padding-right: 165px;
-  }
-
-  .hero-title {
-    font-size: clamp(32px, 8vw, 48px);
-  }
-
-  .hero-sub {
-    font-size: 15px;
-    max-width: 100%;
-    padding-right: 0;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 12px;
-    padding-right: 0;
-  }
-
-  .hero-actions button {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-actions .btn-outline {
-    white-space: nowrap;
-  }
-
-  .hero-content {
-    padding-top: 40px !important;
-    padding-bottom: 24px !important;
-  }
 }
 
 @keyframes scrollPulse {
@@ -222,11 +174,6 @@ cite em { color: #f47820; font-style: normal; }
   border-top: 1px solid var(--border);
 }
 
-.fundraisers-cta h3 {
-  font-size: clamp(28px, 3.5vw, 40px);
-  margin-bottom: 16px;
-}
-
 .fundraisers-cta p {
   font-size: 16px;
   color: #8a7090;
@@ -261,21 +208,19 @@ cite em { color: #f47820; font-style: normal; }
   border-top: 1px solid rgba(42,26,46,0.08);
 }
 
-@media (max-width: 768px) {
-  .hht-inner { grid-template-columns: 1fr; }
-  .dear-grace-inner { grid-template-columns: 1fr; }
+.hht-disclaimer {
+  font-size: 13px;
+  color: #8a7090;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
 /* IN MEMORY SECTION */
 .grace-memory-section {
   padding: 100px 0;
   background: var(--soft);
-}
-
-.grace-memory-title {
-  font-size: clamp(36px, 4vw, 52px);
-  text-align: center;
-  margin-bottom: 16px;
 }
 
 .grace-memory-desc {
@@ -335,16 +280,6 @@ cite em { color: #f47820; font-style: normal; }
   margin-bottom: 28px;
 }
 
-@media (max-width: 768px) {
-  .grace-photos {
-    grid-template-columns: 1fr;
-  }
-  .grace-photo-wrap img,
-  .grace-photo-wrap--tall img {
-    height: 260px;
-  }
-}
-
 .fundraiser-btn {
   background: none;
   border: none;
@@ -360,3 +295,71 @@ cite em { color: #f47820; font-style: normal; }
   transition: color 0.2s;
 }
 .fundraiser-btn:hover { color: #e8407a; }
+
+/* MOBILE â€” always last */
+@media (max-width: 768px) {
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .hero-text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .hero-logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    position: static;
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .hero-actions button {
+    width: auto;
+  }
+
+  .hero-content {
+    padding-top: 40px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .hht-inner { grid-template-columns: 1fr; }
+  .dear-grace-inner { grid-template-columns: 1fr; }
+
+  .grace-photos { grid-template-columns: 1fr; }
+
+  .grace-photo-wrap img,
+  .grace-photo-wrap--tall img {
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .grace-photo-wrap:nth-child(2) img { object-position: center; }
+  .grace-photo-wrap:nth-child(3) img { object-position: center; }
+}

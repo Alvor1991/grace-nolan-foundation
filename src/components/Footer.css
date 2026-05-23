@@ -78,6 +78,20 @@
   .footer-heart { color: #e8407a; }
   
   @media (max-width: 700px) {
-    .footer-inner { grid-template-columns: 1fr; gap: 40px; }
-    .footer-links { grid-template-columns: 1fr 1fr; }
+    .footer-inner { 
+      grid-template-columns: 1fr; 
+      gap: 40px; 
+    }
+    .footer-links { 
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: start;
+    }
+    .footer-col--logo {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .footer-brand-logo {
+      width: 80px;
+    }
   }

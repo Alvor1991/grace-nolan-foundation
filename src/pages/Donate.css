@@ -338,14 +338,29 @@
   @media (max-width: 780px) {
     .donate-container {
       grid-template-columns: 1fr;
+      width: 100%;
+      padding: 0;
+    }
+  
+    .donate-section {
+      padding: 40px 20px 60px;
     }
   
     .donate-impact {
       order: -1;
+      padding: 0;
+    }
+  
+    .donate-impact-item {
+      padding: 16px;
     }
   
     .donate-hero {
       padding: 120px 20px 60px;
+    }
+  
+    .donate-card {
+      padding: 28px 20px;
     }
   }
   
@@ -356,5 +371,63 @@
   
     .donate-card {
       padding: 28px 20px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .donate-section {
+      padding: 40px 12px 60px;
+    }
+  
+    .donate-hero {
+      padding: 120px 12px 60px;
+    }
+  
+    .donate-card {
+      padding: 24px 14px;
+    }
+  
+    .donate-impact-item {
+      padding: 12px;
+    }
+  
+    .donate-page {
+      overflow-x: hidden;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .donate-section {
+      padding: 40px 10px 60px;
+    }
+  
+    .donate-hero {
+      padding: 120px 10px 60px;
+    }
+  
+    .donate-card {
+      padding: 20px 10px;
+    }
+  
+    .donate-impact-item {
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .donate-impact-amount {
+      min-width: 28px;
+      font-size: 1rem;
+    }
+  
+    .donate-impact-desc {
+      font-size: 0.82rem;
+    }
+  
+    .donate-page {
+      overflow-x: hidden;
+    }
+  
+    .donate-container {
+      overflow-x: hidden;
     }
   }

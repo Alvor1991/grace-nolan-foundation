@@ -91,12 +91,17 @@ export default function Home({ navigate }) {
           </div>
           {/* Trusted Resources — outside the grid so it always sits at the bottom */}
           <div className="hht-resources">
-            <div className="section-label">Trusted Resources</div>
-            <div className="hht-links">
-              <a className="btn-outline" style={{ borderColor: "#e8407a", color: "#e8407a" }} href="https://hhtireland.org/" target="_blank" rel="noreferrer">HHT Ireland</a>
-              <a className="btn-outline" style={{ borderColor: "#e8407a", color: "#e8407a" }} href="https://www.curehht.org" target="_blank" rel="noreferrer">Cure HHT</a>
-            </div>
-          </div>
+  <div className="section-label">Trusted Resources</div>
+  <p className="hht-disclaimer">
+    The Grace Nolan Foundation is a charitable organisation and does not provide medical advice. 
+    If you have concerns about HHT or your health, please consult a qualified medical professional 
+    or visit one of the trusted resources below.
+  </p>
+  <div className="hht-links">
+    <a className="btn-outline" style={{ borderColor: "#e8407a", color: "#e8407a" }} href="https://hhtireland.org/" target="_blank" rel="noreferrer">HHT Ireland</a>
+    <a className="btn-outline" style={{ borderColor: "#e8407a", color: "#e8407a" }} href="https://www.curehht.org" target="_blank" rel="noreferrer">Cure HHT</a>
+  </div>
+</div>
         </div>
       </section>
 
